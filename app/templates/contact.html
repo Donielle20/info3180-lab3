@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block main %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My Website - About</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}" />
+    </head>
+
+    <body>
+        <div>
+            <div class="title">
+                <h1>Contact Form</h1>
+            </div>
+
+            <hr>
+
+            <div>
+                <h5>Fill in this form to contact the site owners.</h5>
+            </div>
+
+            <form action="/contact" method="post">
+                {{ form.csrf_token }}
+                <div>
+                    {{ form.name.label(class="form-label") }} {{ form.name(class="form-control") }}
+
+                    <h5>Please enter your full name</h5>
+
+                    <input type="text" id="name" name="full_name" />
+                </div>
+
+                <div>
+                    <label for="mail">E-mail:</label>
+
+                    <h5>Please enter your e-mail address</h5>
+
+                    <input type="email" id="mail" name="email" />
+                </div>
+
+                <div>
+                    <label for="sub">Subject</label>
+
+                    <h5>Please enter the subject for your message</h5>
+
+                    <textarea id="sub" name="subject"></textarea>
+                </div>
+
+                <div>
+                    <label for="msg">Message</label>
+
+                    <h5>Please enter the message you would like to send.</h5>
+                    
+                    <textarea id="msg" name="message"></textarea>
+                </div>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </body>
+</html>
+{% endblock %}

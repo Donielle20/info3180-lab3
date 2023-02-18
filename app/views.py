@@ -38,7 +38,7 @@ def contact():
             subject = myform.subject.data
             message = myform.message.data
 
-            msg = Message(subject, sender=(name, "from@example.com"), recipients=["to@example.com"])
+            msg = Message(subject, sender=(name, email), recipients=["donielle_hope@yahoo.com"])
             msg.body = message
             mail.send(msg)
 

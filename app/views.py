@@ -44,7 +44,7 @@ def contact():
 
             flash('Email successfully sent')
 
-            return render_template('home.html', name=name, email=email, subject=subject, message=message)
+            return redirect(url_for('home'))
 
     return render_template('contact.html', form=myform)
 ###

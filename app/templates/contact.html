@@ -24,36 +24,48 @@
             <form action="/contact" method="post">
                 {{ form.csrf_token }}
                 <div>
-                    {{ form.name.label(class="form-label") }} {{ form.name(class="form-control") }}
-
+                    {{ form.name.label(class="form-label") }} 
+                    
                     <h5>Please enter your full name</h5>
 
-                    <input type="text" id="name" name="full_name" />
+                    {{ form.name(class="form-control" ) }}
                 </div>
 
+                <br>
+                <br>
+
                 <div>
-                    <label for="mail">E-mail:</label>
+                    {{ form.email.label(class="form-label") }} 
 
                     <h5>Please enter your e-mail address</h5>
 
-                    <input type="email" id="mail" name="email" />
+                    {{ form.email(class="form-control" ) }}
                 </div>
 
+                <br>
+                <br>
+
                 <div>
-                    <label for="sub">Subject</label>
+                    {{ form.subject.label(class="form-label") }} 
 
                     <h5>Please enter the subject for your message</h5>
 
-                    <textarea id="sub" name="subject"></textarea>
+                    {{ form.subject(class="form-control" ) }}
                 </div>
 
+                <br>
+                <br>
+
                 <div>
-                    <label for="msg">Message</label>
+                    {{ form.message.label(class="form-label") }} 
 
                     <h5>Please enter the message you would like to send.</h5>
                     
-                    <textarea id="msg" name="message"></textarea>
+                    {{ form.message(class="form-control" ) }}
                 </div>
+
+                <br>
+                <br>
 
                 <button type="submit">Send</button>
             </form>

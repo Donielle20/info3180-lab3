@@ -1,3 +1,31 @@
 body {
     padding-top: 5rem;
 }
+
+.form-control{
+    width: 400px;
+}
+
+.form-control_2{
+    width: 500px;
+    height: 100px;
+}
+
+.separate{
+    display: grid;
+    grid-template-columns: 45px 100px;
+}
+
+.separate_2{
+    display: grid;
+    grid-template-columns: 55px 100px;
+}
+
+.separate_3{
+    display: grid;
+    grid-template-columns: 65px 100px;
+}
+
+.red{
+    color: red;
+}

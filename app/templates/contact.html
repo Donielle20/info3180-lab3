@@ -21,50 +21,56 @@
                 <h5>Fill in this form to contact the site owners.</h5>
             </div>
 
+            <br>
+
             <form action="/contact" method="post">
                 {{ form.csrf_token }}
                 <div>
-                    {{ form.name.label(class="form-label") }} 
+                    <div class="separate">
+                        {{ form.name.label(class="form-label") }} <h6 class="red">(Required)</h6>
+                    </div>  
                     
-                    <h5>Please enter your full name</h5>
+                    <h5>Please enter your full name.</h5>
 
                     {{ form.name(class="form-control" ) }}
                 </div>
 
                 <br>
-                <br>
 
                 <div>
-                    {{ form.email.label(class="form-label") }} 
+                    <div class="separate">
+                        {{ form.email.label(class="form-label") }} <h6 class="red">(Required)</h6>
+                    </div>  
 
-                    <h5>Please enter your e-mail address</h5>
+                    <h5>Please enter your e-mail address.</h5>
 
                     {{ form.email(class="form-control" ) }}
                 </div>
 
                 <br>
-                <br>
 
                 <div>
-                    {{ form.subject.label(class="form-label") }} 
+                    <div class="separate_2">
+                        {{ form.subject.label(class="form-label") }} <h6 class="red">(Required)</h6>
+                    </div>  
 
-                    <h5>Please enter the subject for your message</h5>
+                    <h5>Please enter the subject for your message.</h5>
 
                     {{ form.subject(class="form-control" ) }}
                 </div>
 
                 <br>
-                <br>
 
                 <div>
-                    {{ form.message.label(class="form-label") }} 
+                    <div class="separate_3">
+                        {{ form.message.label(class="form-label") }} <h6 class="red">(Required)</h6>
+                    </div>  
 
                     <h5>Please enter the message you would like to send.</h5>
                     
-                    {{ form.message(class="form-control" ) }}
+                    {{ form.message(class="form-control_2" ) }}
                 </div>
 
-                <br>
                 <br>
 
                 <button type="submit">Send</button>

@@ -46,6 +46,8 @@ def contact():
 
             return redirect(url_for('home'))
 
+    flash_errors(myform)
+
     return render_template('contact.html', form=myform)
 ###
 # The functions below should be applicable to all Flask apps.
